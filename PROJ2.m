@@ -1,4 +1,3 @@
-%Alon Spinner 305184335
 %Project 2 in Computational Geomtrey 2 - 036020 winter 18-19
 
 %---------------Important notes:
@@ -22,38 +21,38 @@
 %SplitPush.UserData stores the amount of patches that have been plotted
 %since the last reset (by enter points). For plot colors
 
-function varargout = PROJ2_305184335(varargin)
-% PROJ2_305184335 MATLAB code for PROJ2_305184335.fig
-%      PROJ2_305184335, by itself, creates a new PROJ2_305184335 or raises the existing
+function varargout = PROJ2(varargin)
+% PROJ2 MATLAB code for PROJ2.fig
+%      PROJ2, by itself, creates a new PROJ2 or raises the existing
 %      singleton*.
 %
-%      H = PROJ2_305184335 returns the handle to a new PROJ2_305184335 or the handle to
+%      H = PROJ2 returns the handle to a new PROJ2 or the handle to
 %      the existing singleton*.
 %
-%      PROJ2_305184335('CALLBACK',hObject,eventData,handles,...) calls the local
-%      function named CALLBACK in PROJ2_305184335.M with the given input arguments.
+%      PROJ2('CALLBACK',hObject,eventData,handles,...) calls the local
+%      function named CALLBACK in PROJ2.M with the given input arguments.
 %
-%      PROJ2_305184335('Property','Value',...) creates a new PROJ2_305184335 or raises the
+%      PROJ2('Property','Value',...) creates a new PROJ2 or raises the
 %      existing singleton*.  Starting from the left, property value pairs are
-%      applied to the GUI before PROJ2_305184335_OpeningFcn gets called.  An
+%      applied to the GUI before PROJ2_OpeningFcn gets called.  An
 %      unrecognized property name or invalid value makes property application
-%      stop.  All inputs are passed to PROJ2_305184335_OpeningFcn via varargin.
+%      stop.  All inputs are passed to PROJ2_OpeningFcn via varargin.
 %
 %      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one
 %      instance to run (singleton)".
 %
 % See also: GUIDE, GUIDATA, GUIHANDLES
 
-% Edit the above text to modify the response to help PROJ2_305184335
+% Edit the above text to modify the response to help PROJ2
 
-% Last Modified by GUIDE v2.5 28-May-2019 13:07:57
+% Last Modified by GUIDE v2.5 20-Jun-2021 18:08:42
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
                    'gui_Singleton',  gui_Singleton, ...
-                   'gui_OpeningFcn', @PROJ2_305184335_OpeningFcn, ...
-                   'gui_OutputFcn',  @PROJ2_305184335_OutputFcn, ...
+                   'gui_OpeningFcn', @PROJ2_OpeningFcn, ...
+                   'gui_OutputFcn',  @PROJ2_OutputFcn, ...
                    'gui_LayoutFcn',  [] , ...
                    'gui_Callback',   []);
 if nargin && ischar(varargin{1})
@@ -65,14 +64,14 @@ if nargout
 else
     gui_mainfcn(gui_State, varargin{:});
 end
-function PROJ2_305184335_OpeningFcn(hObject, eventdata, handles, varargin)
+function PROJ2_OpeningFcn(hObject, eventdata, handles, varargin)
 % This function has no output args, see OutputFcn.
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-% varargin   command line arguments to PROJ2_305184335 (see VARARGIN)
+% varargin   command line arguments to PROJ2 (see VARARGIN)
 
-% Choose default command line output for PROJ2_305184335
+% Choose default command line output for PROJ2
 handles.output = hObject;
 
 % Update handles structure
@@ -112,7 +111,7 @@ DrawInitialAx1(CP,handles);
 %Change color of MovPush to OrangeBrick - can be used
 OrangeBrick=[1,0.5,0.1];
 handles.MovPush.BackgroundColor=OrangeBrick;
-function varargout = PROJ2_305184335_OutputFcn(hObject, eventdata, handles) 
+function varargout = PROJ2_OutputFcn(hObject, eventdata, handles) 
 % varargout  cell array for returning output args (see VARARGOUT);
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB

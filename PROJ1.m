@@ -1,4 +1,3 @@
-%Alon Spinner 305184335
 %Project 1 in Computational Geomtrey 1 - 036020 winter 18-19
 
 %---------------Important notes:
@@ -21,38 +20,38 @@
 %axis(Ax1,'auto') - on DrawInitialAx1.
 %axis(Ax1,'manual') - on SplitSec iteractions
 
-function varargout = PROJ1_305184335(varargin)
-% PROJ1_305184335 MATLAB code for PROJ1_305184335.fig
-%      PROJ1_305184335, by itself, creates a new PROJ1_305184335 or raises the existing
+function varargout = PROJ1(varargin)
+% PROJ1 MATLAB code for PROJ1.fig
+%      PROJ1, by itself, creates a new PROJ1 or raises the existing
 %      singleton*.
 %
-%      H = PROJ1_305184335 returns the handle to a new PROJ1_305184335 or the handle to
+%      H = PROJ1 returns the handle to a new PROJ1 or the handle to
 %      the existing singleton*.
 %
-%      PROJ1_305184335('CALLBACK',hObject,eventData,handles,...) calls the local
-%      function named CALLBACK in PROJ1_305184335.M with the given input arguments.
+%      PROJ1('CALLBACK',hObject,eventData,handles,...) calls the local
+%      function named CALLBACK in PROJ1.M with the given input arguments.
 %
-%      PROJ1_305184335('Property','Value',...) creates a new PROJ1_305184335 or raises the
+%      PROJ1('Property','Value',...) creates a new PROJ1 or raises the
 %      existing singleton*.  Starting from the left, property value pairs are
-%      applied to the GUI before PROJ1_305184335_OpeningFcn gets called.  An
+%      applied to the GUI before PROJ1_OpeningFcn gets called.  An
 %      unrecognized property name or invalid value makes property application
-%      stop.  All inputs are passed to PROJ1_305184335_OpeningFcn via varargin.
+%      stop.  All inputs are passed to PROJ1_OpeningFcn via varargin.
 %
 %      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one
 %      instance to run (singleton)".
 %
 % See also: GUIDE, GUIDATA, GUIHANDLES
 
-% Edit the above text to modify the response to help PROJ1_305184335
+% Edit the above text to modify the response to help PROJ1
 
-% Last Modified by GUIDE v2.5 19-Jan-2019 10:45:03
+% Last Modified by GUIDE v2.5 20-Jun-2021 18:09:26
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
                    'gui_Singleton',  gui_Singleton, ...
-                   'gui_OpeningFcn', @PROJ1_305184335_OpeningFcn, ...
-                   'gui_OutputFcn',  @PROJ1_305184335_OutputFcn, ...
+                   'gui_OpeningFcn', @PROJ1_OpeningFcn, ...
+                   'gui_OutputFcn',  @PROJ1_OutputFcn, ...
                    'gui_LayoutFcn',  [] , ...
                    'gui_Callback',   []);
 if nargin && ischar(varargin{1})
@@ -64,14 +63,14 @@ if nargout
 else
     gui_mainfcn(gui_State, varargin{:});
 end
-function PROJ1_305184335_OpeningFcn(hObject, eventdata, handles, varargin)
+function PROJ1_OpeningFcn(hObject, eventdata, handles, varargin)
 % This function has no output args, see OutputFcn.
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-% varargin   command line arguments to PROJ1_305184335 (see VARARGIN)
+% varargin   command line arguments to PROJ1 (see VARARGIN)
 
-% Choose default command line output for PROJ1_305184335
+% Choose default command line output for PROJ1
 handles.output = hObject;
 
 % Update handles structure
@@ -90,7 +89,7 @@ Pnts=FixPnts4C1(Pnts); %Fix continuaty
 handles.MovPntsPush.UserData=Pnts; %saves control points into MovPntsPush
 %Draw on Ax1
 DrawInitialAx1(Pnts,handles);
-function varargout = PROJ1_305184335_OutputFcn(hObject, eventdata, handles) 
+function varargout = PROJ1_OutputFcn(hObject, eventdata, handles) 
 % varargout  cell array for returning output args (see VARARGOUT);
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
